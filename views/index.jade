@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+    #left-column.column
+    h2 Elige tu héroe
+    ul#heroes
+      each hero in heroes
+        li(class='hero-name')
+          a(href='#') #{hero}
+  
+  - var languages = ['php', 'node', 'ruby']
+    div
+      each value, index in languages
+        p= index + ". " + value

@@ -1,0 +1,27 @@
+doctype html
+html(lang='es')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src="/javascripts/view.index.js")
+    
+  body
+  
+     
+    block content
+    
+    p Texto dentro de un tag de <em>parrafo</em>
+    //- Variable simple
+    - variable = "Jade Template"
+    
+    h3 El valor de nuestra variable es:  #{variable} !!!
+    
+    //- Variable como objeto
+    - datos = { nombre: 'Miguel', pais:'Perú' }
+    
+    p.describe Mi nombre es #{datos.nombre} y vivo en Lima,#{datos.pais}
+    //- Variable Booleana(true/false)
+    - booleano = true
+    
+    p Generar código HTML con jade es #{booleano ? "Fácil" : "Dificil"}
