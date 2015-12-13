@@ -16,8 +16,8 @@ var config = require('./config');
 var app = express();
 
 //manually setup
-app.set('port', process.env.PORT || 1701);
-app.listen(1701);
+app.set('port', process.env.PORT || 8080);
+app.listen(8080);
 
 
 
